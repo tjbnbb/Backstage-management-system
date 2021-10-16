@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.tjb.backend.mapper.PersonMapper">
+
+    <update id="createPersontable" >
+        CREATE TABLE IF NOT EXISTS person (
+        username varchar(10) NOT NULL,
+        name varchar(20) NOT NULL,
+        age int,
+        teleno char(11),
+        PRIMARY KEY (username));
+    </update>
+
+    <!--插入新用户信息,返回数据库操作影响行数，为0则是失败-->
+    <insert id="insertPerson" parameterType="com.tjb.backend.bean.PersonBean">
+        INSERT INTO person
+        values (#{username},#{name},#{age},#{teleno});
+    </insert>
+
+    <!--根据username删除以此用户，返回数据库操作影响行数，为0则是失败-->
+    <delete id="deletelikePerson" parameterType="String">
+        DELETE FROM person
+        WHERE username like #{username};
+    </delete>
+
+    <!--根据username修改用户信息，返回数据库操作影响行数，为0则是失败-->
+    <update id="updatePerson" parameterType="com.tjb.backend.bean.PersonBean">
+        UPDATE person
+        SET name = #{name}, age = #{age}, teleno = #{teleno}
+        WHERE username = #{username};
+    </update>
+
+    <!--查询指定用户名信息，返回一个List<Bean-->
+    <select id="getlikePerson" parameterType="String" resultType="com.tjb.backend.bean.PersonBean">
+        SELECT * FROM person WHERE username = #{username}
+    </select>
+
+    <!--查询所有用户信息，返回一个List<Bean>-->
+    <select id="getAllPerson" resultType="com.tjb.backend.bean.PersonBean">
+        SELECT * FROM person
+    </select>
+
+    <update id="dropPersontable" >
+        DROP TABLE IF EXISTS person ;
+    </update>
+
+</mapper>
