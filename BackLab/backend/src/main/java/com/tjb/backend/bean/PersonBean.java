@@ -13,14 +13,6 @@ public class PersonBean {
         this.teleno = teleno;
     }
 
-    /*public PersonBean(String username,String name){
-        this(username,name,null,"");
-    }
-
-    public PersonBean(String username,String name,Integer age){
-        this(username,name,age,"");
-    }*/
-
     public String getUsername(){
         return username;
     }

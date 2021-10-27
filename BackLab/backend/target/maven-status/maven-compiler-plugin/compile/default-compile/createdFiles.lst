@@ -1,0 +1,12 @@
+com\tjb\backend\bean\PersonBean.class
+com\tjb\backend\servicelmpl\UsersServicelmpl.class
+com\tjb\backend\controller\LoginController.class
+com\tjb\backend\service\UsersService.class
+com\tjb\backend\servicelmpl\PersonServicelmpl.class
+com\tjb\backend\bean\UsersBean.class
+com\tjb\backend\mapper\PersonMapper.class
+com\tjb\backend\service\PersonService.class
+com\tjb\backend\mapper\UsersMapper.class
+com\tjb\backend\controller\PersonController.class
+com\tjb\backend\controller\UsersController.class
+com\tjb\backend\BackendApplication.class

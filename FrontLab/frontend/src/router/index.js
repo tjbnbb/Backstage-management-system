@@ -82,7 +82,7 @@ export const constantRoutes = [
     component: Layout,
     children: [
       {
-        path: 'https://github.com/tjbnbb',
+        path: 'https://github.com/tjbnbb/LAB1_2',
         meta: { title: 'GitHub-Link', icon: 'link' }
       }
     ]
